@@ -14,7 +14,7 @@ def toggle(c):
 for c in map(toggle, 'Hello'):
     print(c)
 
-st = "93,33,44,88,55"
+st = "93,33,44,88,5A,55"
 nums = st.split(",")
-print( sum(map(int, nums)))
-
+valid_nums = filter(str.isdigit, nums)
+print(sum(map(int, valid_nums)))
