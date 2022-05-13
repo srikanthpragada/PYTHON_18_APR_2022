@@ -1,16 +1,24 @@
 class Account:
+    # static variables / class variable
+    minbal = 10000
+
+    @staticmethod
+    def getminbal():
+        return Account.minbal
+
     def __init__(self, acno, ahname, balance=0):
+        # object attributes
         self.acno = acno
         self.ahname = ahname
         self.balance = balance
-        self.minbal = 10000 
+
 
     # Methods
     def deposit(self, amount):
         self.balance += amount
 
     def withdraw(self, amount):
-        if amount <= self.balance:
+        if amount <= self.balance - Account.minbal:
             self.balance -= amount
         else:
             raise ValueError('Insufficient Balance')
@@ -22,6 +30,8 @@ class Account:
         print(f"{self.acno}, {self.ahname}, {self.balance}")
 
 
+
+print(Account.getminbal())   # call static method
 a1 = Account(1, "Scott", 10000)
 a2 = Account(2, "Cathy")
 a2.deposit(5000)
