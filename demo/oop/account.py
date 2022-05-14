@@ -12,7 +12,6 @@ class Account:
         self.ahname = ahname
         self.balance = balance
 
-
     # Methods
     def deposit(self, amount):
         self.balance += amount
@@ -29,10 +28,14 @@ class Account:
     def show(self):
         print(f"{self.acno}, {self.ahname}, {self.balance}")
 
+    @property
+    def availablebalance(self):
+        return self.balance - Account.minbal
 
 
-print(Account.getminbal())   # call static method
+print(Account.getminbal())  # call static method
 a1 = Account(1, "Scott", 10000)
+print(a1.availablebalance)
 a2 = Account(2, "Cathy")
 a2.deposit(5000)
 a2.withdraw(10000)

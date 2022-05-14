@@ -24,5 +24,9 @@ print(t1)  # str(t1)  -> t1.__str__()
 print(t2 == t3)  # t2.__eq__(t3)
 print(t2 > t1)   # t2.__gt__(t1)
 
+l = [Time(10,20,30), Time(1,2,3), Time(10,10,10)]
+
+for t in sorted(l):
+    print(t)
 
 
