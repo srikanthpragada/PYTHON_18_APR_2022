@@ -1,10 +1,9 @@
 
 try:
     num = int(input("Enter number :"))
-    # process
-except:
+    print(100 / num)
+except ValueError:
     print("Sorry! Invalid number!")
-
-
-
+except ZeroDivisionError:
+    print("Sorry! Zero is not allowed!")
 
