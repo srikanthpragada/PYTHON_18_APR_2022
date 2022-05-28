@@ -1,0 +1,3 @@
+This is line one
+This is another line - second
+We have only a small file to test
