@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="" ?>
+<catalog>
+    <book>
+        <title>The Outlier</title>
+        <price>450</price>
+    </book>
+    <book>
+        <title>No rules rules</title>
+        <price>650</price>
+    </book>
+</catalog>
