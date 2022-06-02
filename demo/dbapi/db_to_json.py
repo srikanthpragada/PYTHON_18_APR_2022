@@ -6,7 +6,7 @@ import dbutil
 
 
 # Convert tuple with emp details to dict
-def emp_to_dict(emp):
+def row_to_dict(emp):
     return {"id": emp[0], "name": emp[1], "job": emp[2], "salary": emp[3]}
 
 
@@ -16,7 +16,7 @@ cur = con.cursor()
 cur.execute("select * from employees")  # SQL Command
 
 for emp in cur.fetchall():
-    employees.append(emp_to_dict(emp)) # Tuple to dict
+    employees.append(row_to_dict(emp)) # Tuple to dict
 
 cur.close()
 con.close()
